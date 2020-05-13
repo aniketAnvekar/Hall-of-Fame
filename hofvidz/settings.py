@@ -26,7 +26,7 @@ SECRET_KEY = 'fjn27^4=f=&%jgvvrs^*a^lg+6s&zj(*110_)&ti_etulyhso1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['nameless-hollows-93918.herokuapp.com','makeyourhalloffame.com','www.makeyourhalloffame.com']
+ALLOWED_HOSTS = ['nameless-hollows-93918.herokuapp.com']
 
 
 # Application definition
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middkeware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'hofvidz.urls'
@@ -123,4 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATTICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
