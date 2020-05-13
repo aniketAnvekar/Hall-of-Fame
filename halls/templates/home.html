@@ -12,7 +12,7 @@
           {% endif %}
     </div>
     </section>
-<!-- <div class="container">
+<div class="container">
   <h2 class="text-center">Popular Hall of Fames</h2>
   {% for hall in popular_halls %}
   <h4><a href="{% url 'detail_hall' hall.id %}">{{ hall.title }}</a></h4>
@@ -25,5 +25,18 @@
   {% endfor %}
   </div>
   {% endfor %}
-</div> -->
+  <h2 class="text-center">Recent Hall of Fames</h2>
+  {% for hall in recent_halls %}
+  <h4><a href="{% url 'detail_hall' hall.id %}">{{ hall.title }}</a></h4>
+  <div class="row">
+  {% for video in hall.video_set.all %}
+    <div class="col-md-4 mt-3"><div class="card mb-4 shadow-sm">
+    <iframe width="335" height="240" src="https://www.youtube.com/embed/{{ video.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="card-body"><p class="card-text">{{ video.title }}</p>
+    </div></div></div>
+  {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
 {% endblock %}
