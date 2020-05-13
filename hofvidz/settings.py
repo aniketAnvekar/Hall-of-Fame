@@ -26,7 +26,7 @@ SECRET_KEY = 'fjn27^4=f=&%jgvvrs^*a^lg+6s&zj(*110_)&ti_etulyhso1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nameless-hollows-93918.herokuapp.com','makeyourhalloffame.com','www.makeyourhalloffame.com']
 
 
 # Application definition
